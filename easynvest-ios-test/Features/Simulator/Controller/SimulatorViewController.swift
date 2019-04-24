@@ -8,14 +8,9 @@
 
 import UIKit
 
-public protocol SimulatorViewControllerDelegate: class {
-    func SimulatorViewControllerDidTapSimulate(_ viewController: SimulatorViewController)
-}
-
 public class SimulatorViewController: UIViewController {
 
     private var simulatorViewScreen: SimulatorViewScreen
-    
     public weak var delegate: SimulatorViewControllerDelegate?
     
     init() {
@@ -23,6 +18,7 @@ public class SimulatorViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -35,7 +31,7 @@ public class SimulatorViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Simulador"
         simulatorViewScreen.simulateAction = {
-            self.delegate?.SimulatorViewControllerDidTapSimulate(self)
+            self.delegate?.simulatorViewControllerDidTapSimulate(self)
         }
     }
     
@@ -51,7 +47,7 @@ public class SimulatorViewController: UIViewController {
     
 }
 
-extension SimulatorViewController: KeyboardListenerDelegate{
+extension SimulatorViewController: KeyboardListenerDelegate {
     
     public func keyboardWillAppear(_ notification: Notification) {
         simulatorViewScreen.frame.origin.y =

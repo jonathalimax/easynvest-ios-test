@@ -34,7 +34,7 @@ public class SimulatorCoordinator: Coordinator {
 
 extension SimulatorCoordinator: SimulatorViewControllerDelegate {
     
-    public func SimulatorViewControllerDidTapSimulate(_ viewController: SimulatorViewController) {
+    public func simulatorViewControllerDidTapSimulate(_ viewController: SimulatorViewController) {
         startSimulatorResult()
     }
     

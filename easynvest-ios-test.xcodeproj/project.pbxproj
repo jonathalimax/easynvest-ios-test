@@ -21,10 +21,12 @@
 		1202E555226FB815006664BE /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E554226FB815006664BE /* ViewCoding.swift */; };
 		1202E558226FBC5A006664BE /* SimulatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E557226FBC5A006664BE /* SimulatorInputView.swift */; };
 		1202E55A226FC08F006664BE /* SimulatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E559226FC08F006664BE /* SimulatorCoordinator.swift */; };
-		1202E55D226FDB4A006664BE /* PrettyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E55C226FDB4A006664BE /* PrettyButtonView.swift */; };
-		1202E55F226FEC81006664BE /* SimulatorInputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E55E226FEC81006664BE /* SimulatorInputType.swift */; };
-		1202E561226FEFF3006664BE /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E560226FEFF3006664BE /* KeyboardHandler.swift */; };
+		1202E55D226FDB4A006664BE /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E55C226FDB4A006664BE /* PrettyButton.swift */; };
+		1202E561226FEFF3006664BE /* KeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E560226FEFF3006664BE /* KeyboardListener.swift */; };
 		1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E563226FF098006664BE /* Notification+keyboard.swift */; };
+		922A8EE62270EBE60074F248 /* KeyboardListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */; };
+		922A8EE82270EC0E0074F248 /* SimulatorViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */; };
+		92F585752270EE2C0014477B /* SimulatorInputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585742270EE2C0014477B /* SimulatorInputType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +46,12 @@
 		1202E554226FB815006664BE /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		1202E557226FBC5A006664BE /* SimulatorInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorInputView.swift; sourceTree = "<group>"; };
 		1202E559226FC08F006664BE /* SimulatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorCoordinator.swift; sourceTree = "<group>"; };
-		1202E55C226FDB4A006664BE /* PrettyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButtonView.swift; sourceTree = "<group>"; };
-		1202E55E226FEC81006664BE /* SimulatorInputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorInputType.swift; sourceTree = "<group>"; };
-		1202E560226FEFF3006664BE /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		1202E55C226FDB4A006664BE /* PrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButton.swift; sourceTree = "<group>"; };
+		1202E560226FEFF3006664BE /* KeyboardListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListener.swift; sourceTree = "<group>"; };
 		1202E563226FF098006664BE /* Notification+keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+keyboard.swift"; sourceTree = "<group>"; };
+		922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListenerDelegate.swift; sourceTree = "<group>"; };
+		922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewControllerDelegate.swift; sourceTree = "<group>"; };
+		92F585742270EE2C0014477B /* SimulatorInputType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorInputType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 			children = (
 				1202E542226FB080006664BE /* SimulatorViewController.swift */,
 				1202E544226FB094006664BE /* SimulatorResultViewController.swift */,
+				922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				1202E559226FC08F006664BE /* SimulatorCoordinator.swift */,
-				1202E55E226FEC81006664BE /* SimulatorInputType.swift */,
+				92F585742270EE2C0014477B /* SimulatorInputType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,7 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				1202E554226FB815006664BE /* ViewCoding.swift */,
-				1202E560226FEFF3006664BE /* KeyboardHandler.swift */,
+				1202E560226FEFF3006664BE /* KeyboardListener.swift */,
+				922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -204,7 +210,7 @@
 		1202E55B226FDB24006664BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1202E55C226FDB4A006664BE /* PrettyButtonView.swift */,
+				1202E55C226FDB4A006664BE /* PrettyButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +234,7 @@
 				1202E520226F99BE006664BE /* Frameworks */,
 				1202E521226F99BE006664BE /* Resources */,
 				1202E556226FB923006664BE /* Carthage */,
+				922A8EE42270E4A30074F248 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -304,6 +311,24 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		922A8EE42270E4A30074F248 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -312,17 +337,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1202E54C226FB709006664BE /* SimulatorResultViewScreen.swift in Sources */,
-				1202E561226FEFF3006664BE /* KeyboardHandler.swift in Sources */,
+				1202E561226FEFF3006664BE /* KeyboardListener.swift in Sources */,
 				1202E558226FBC5A006664BE /* SimulatorInputView.swift in Sources */,
-				1202E55D226FDB4A006664BE /* PrettyButtonView.swift in Sources */,
+				1202E55D226FDB4A006664BE /* PrettyButton.swift in Sources */,
 				1202E545226FB094006664BE /* SimulatorResultViewController.swift in Sources */,
+				92F585752270EE2C0014477B /* SimulatorInputType.swift in Sources */,
 				1202E555226FB815006664BE /* ViewCoding.swift in Sources */,
-				1202E55F226FEC81006664BE /* SimulatorInputType.swift in Sources */,
 				1202E53F226FAFC9006664BE /* AppCoordinator.swift in Sources */,
 				1202E527226F99BE006664BE /* AppDelegate.swift in Sources */,
 				1202E54A226FB696006664BE /* SimulatorViewScreen.swift in Sources */,
+				922A8EE82270EC0E0074F248 /* SimulatorViewControllerDelegate.swift in Sources */,
 				1202E541226FAFF2006664BE /* Coordinator.swift in Sources */,
 				1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */,
+				922A8EE62270EBE60074F248 /* KeyboardListenerDelegate.swift in Sources */,
 				1202E543226FB080006664BE /* SimulatorViewController.swift in Sources */,
 				1202E55A226FC08F006664BE /* SimulatorCoordinator.swift in Sources */,
 			);
@@ -476,7 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -499,7 +526,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

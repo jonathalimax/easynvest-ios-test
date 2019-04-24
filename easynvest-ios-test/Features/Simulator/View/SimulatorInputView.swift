@@ -29,7 +29,11 @@ public class SimulatorInputView: UIView {
     
     private lazy var bottomLineView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0, alpha: 0.1)
+        let white: CGFloat = 0
+        let alpha: CGFloat = 0.1
+        view.backgroundColor =
+            UIColor(white: white,
+                    alpha: alpha)
         return view
     }()
     
@@ -50,6 +54,7 @@ public class SimulatorInputView: UIView {
         }
     }
     
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
