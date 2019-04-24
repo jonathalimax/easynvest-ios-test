@@ -8,20 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		1202E527226F99BE006664BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E526226F99BE006664BE /* AppDelegate.swift */; };
-		1202E529226F99BE006664BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E528226F99BE006664BE /* ViewController.swift */; };
-		1202E52C226F99BE006664BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1202E52A226F99BE006664BE /* Main.storyboard */; };
 		1202E52E226F99BF006664BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1202E52D226F99BF006664BE /* Assets.xcassets */; };
 		1202E531226F99BF006664BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1202E52F226F99BF006664BE /* LaunchScreen.storyboard */; };
+		1202E53F226FAFC9006664BE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E53E226FAFC9006664BE /* AppCoordinator.swift */; };
+		1202E541226FAFF2006664BE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E540226FAFF2006664BE /* Coordinator.swift */; };
+		1202E543226FB080006664BE /* SimulatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E542226FB080006664BE /* SimulatorViewController.swift */; };
+		1202E545226FB094006664BE /* SimulatorResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E544226FB094006664BE /* SimulatorResultViewController.swift */; };
+		1202E54A226FB696006664BE /* SimulatorViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E549226FB696006664BE /* SimulatorViewScreen.swift */; };
+		1202E54C226FB709006664BE /* SimulatorResultViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E54B226FB709006664BE /* SimulatorResultViewScreen.swift */; };
+		1202E550226FB7B5006664BE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1202E54E226FB7B5006664BE /* Alamofire.framework */; };
+		1202E551226FB7B5006664BE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1202E54F226FB7B5006664BE /* SnapKit.framework */; };
+		1202E555226FB815006664BE /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E554226FB815006664BE /* ViewCoding.swift */; };
+		1202E558226FBC5A006664BE /* SimulatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E557226FBC5A006664BE /* SimulatorInputView.swift */; };
+		1202E55A226FC08F006664BE /* SimulatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E559226FC08F006664BE /* SimulatorCoordinator.swift */; };
+		1202E55D226FDB4A006664BE /* PrettyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E55C226FDB4A006664BE /* PrettyButtonView.swift */; };
+		1202E55F226FEC81006664BE /* SimulatorInputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E55E226FEC81006664BE /* SimulatorInputType.swift */; };
+		1202E561226FEFF3006664BE /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E560226FEFF3006664BE /* KeyboardHandler.swift */; };
+		1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E563226FF098006664BE /* Notification+keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1202E523226F99BE006664BE /* easynvest-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easynvest-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1202E526226F99BE006664BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1202E528226F99BE006664BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1202E52B226F99BE006664BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1202E52D226F99BF006664BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1202E530226F99BF006664BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1202E532226F99BF006664BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1202E53E226FAFC9006664BE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1202E540226FAFF2006664BE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1202E542226FB080006664BE /* SimulatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewController.swift; sourceTree = "<group>"; };
+		1202E544226FB094006664BE /* SimulatorResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultViewController.swift; sourceTree = "<group>"; };
+		1202E549226FB696006664BE /* SimulatorViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewScreen.swift; sourceTree = "<group>"; };
+		1202E54B226FB709006664BE /* SimulatorResultViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultViewScreen.swift; sourceTree = "<group>"; };
+		1202E54E226FB7B5006664BE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1202E54F226FB7B5006664BE /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		1202E554226FB815006664BE /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
+		1202E557226FBC5A006664BE /* SimulatorInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorInputView.swift; sourceTree = "<group>"; };
+		1202E559226FC08F006664BE /* SimulatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorCoordinator.swift; sourceTree = "<group>"; };
+		1202E55C226FDB4A006664BE /* PrettyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButtonView.swift; sourceTree = "<group>"; };
+		1202E55E226FEC81006664BE /* SimulatorInputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorInputType.swift; sourceTree = "<group>"; };
+		1202E560226FEFF3006664BE /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		1202E563226FF098006664BE /* Notification+keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+keyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1202E550226FB7B5006664BE /* Alamofire.framework in Frameworks */,
+				1202E551226FB7B5006664BE /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +68,7 @@
 			children = (
 				1202E525226F99BE006664BE /* easynvest-ios-test */,
 				1202E524226F99BE006664BE /* Products */,
+				1202E54D226FB7B5006664BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +83,138 @@
 		1202E525226F99BE006664BE /* easynvest-ios-test */ = {
 			isa = PBXGroup;
 			children = (
-				1202E526226F99BE006664BE /* AppDelegate.swift */,
-				1202E528226F99BE006664BE /* ViewController.swift */,
-				1202E52A226F99BE006664BE /* Main.storyboard */,
-				1202E52D226F99BF006664BE /* Assets.xcassets */,
-				1202E52F226F99BF006664BE /* LaunchScreen.storyboard */,
-				1202E532226F99BF006664BE /* Info.plist */,
+				1202E539226FAB85006664BE /* API */,
+				1202E53A226FAB89006664BE /* Features */,
+				1202E53B226FABAA006664BE /* Resources */,
+				1202E538226FAB68006664BE /* Setup */,
+				1202E552226FB7D8006664BE /* Shared */,
 			);
 			path = "easynvest-ios-test";
+			sourceTree = "<group>";
+		};
+		1202E538226FAB68006664BE /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				1202E532226F99BF006664BE /* Info.plist */,
+				1202E526226F99BE006664BE /* AppDelegate.swift */,
+				1202E53C226FADD3006664BE /* Flow */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		1202E539226FAB85006664BE /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1202E53A226FAB89006664BE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1202E53D226FAE35006664BE /* Simulator */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		1202E53B226FABAA006664BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1202E52D226F99BF006664BE /* Assets.xcassets */,
+				1202E52F226F99BF006664BE /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1202E53C226FADD3006664BE /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1202E53E226FAFC9006664BE /* AppCoordinator.swift */,
+				1202E540226FAFF2006664BE /* Coordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		1202E53D226FAE35006664BE /* Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				1202E546226FB09D006664BE /* Controller */,
+				1202E548226FB0B0006664BE /* Model */,
+				1202E547226FB0AB006664BE /* View */,
+			);
+			path = Simulator;
+			sourceTree = "<group>";
+		};
+		1202E546226FB09D006664BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1202E542226FB080006664BE /* SimulatorViewController.swift */,
+				1202E544226FB094006664BE /* SimulatorResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1202E547226FB0AB006664BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1202E557226FBC5A006664BE /* SimulatorInputView.swift */,
+				1202E54B226FB709006664BE /* SimulatorResultViewScreen.swift */,
+				1202E549226FB696006664BE /* SimulatorViewScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1202E548226FB0B0006664BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1202E559226FC08F006664BE /* SimulatorCoordinator.swift */,
+				1202E55E226FEC81006664BE /* SimulatorInputType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1202E54D226FB7B5006664BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1202E54E226FB7B5006664BE /* Alamofire.framework */,
+				1202E54F226FB7B5006664BE /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1202E552226FB7D8006664BE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1202E553226FB7F8006664BE /* Classes */,
+				1202E562226FF082006664BE /* Extensions */,
+				1202E55B226FDB24006664BE /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		1202E553226FB7F8006664BE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1202E554226FB815006664BE /* ViewCoding.swift */,
+				1202E560226FEFF3006664BE /* KeyboardHandler.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1202E55B226FDB24006664BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1202E55C226FDB4A006664BE /* PrettyButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1202E562226FF082006664BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1202E563226FF098006664BE /* Notification+keyboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +227,7 @@
 				1202E51F226F99BE006664BE /* Sources */,
 				1202E520226F99BE006664BE /* Frameworks */,
 				1202E521226F99BE006664BE /* Resources */,
+				1202E556226FB923006664BE /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -124,33 +278,59 @@
 			files = (
 				1202E531226F99BF006664BE /* LaunchScreen.storyboard in Resources */,
 				1202E52E226F99BF006664BE /* Assets.xcassets in Resources */,
-				1202E52C226F99BE006664BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1202E556226FB923006664BE /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1202E51F226F99BE006664BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1202E529226F99BE006664BE /* ViewController.swift in Sources */,
+				1202E54C226FB709006664BE /* SimulatorResultViewScreen.swift in Sources */,
+				1202E561226FEFF3006664BE /* KeyboardHandler.swift in Sources */,
+				1202E558226FBC5A006664BE /* SimulatorInputView.swift in Sources */,
+				1202E55D226FDB4A006664BE /* PrettyButtonView.swift in Sources */,
+				1202E545226FB094006664BE /* SimulatorResultViewController.swift in Sources */,
+				1202E555226FB815006664BE /* ViewCoding.swift in Sources */,
+				1202E55F226FEC81006664BE /* SimulatorInputType.swift in Sources */,
+				1202E53F226FAFC9006664BE /* AppCoordinator.swift in Sources */,
 				1202E527226F99BE006664BE /* AppDelegate.swift in Sources */,
+				1202E54A226FB696006664BE /* SimulatorViewScreen.swift in Sources */,
+				1202E541226FAFF2006664BE /* Coordinator.swift in Sources */,
+				1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */,
+				1202E543226FB080006664BE /* SimulatorViewController.swift in Sources */,
+				1202E55A226FC08F006664BE /* SimulatorCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1202E52A226F99BE006664BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1202E52B226F99BE006664BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1202E52F226F99BF006664BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -213,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,14 +462,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "easynvest-ios-test/Info.plist";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/easynvest-ios-test/Setup/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,14 +485,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "easynvest-ios-test/Info.plist";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/easynvest-ios-test/Setup/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
