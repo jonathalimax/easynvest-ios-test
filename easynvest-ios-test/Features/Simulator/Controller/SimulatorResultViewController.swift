@@ -10,7 +10,10 @@ import UIKit
 
 public class SimulatorResultViewController: UIViewController {
     
+    private var simulatorResultViewScreen: SimulatorResultViewScreen
+    
     init() {
+        simulatorResultViewScreen = SimulatorResultViewScreen()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -20,6 +23,7 @@ public class SimulatorResultViewController: UIViewController {
     }
     
     public override func loadView() {
+        self.view = simulatorResultViewScreen
     }
     
     public override func viewDidLoad() {

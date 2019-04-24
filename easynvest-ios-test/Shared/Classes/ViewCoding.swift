@@ -17,9 +17,9 @@ public protocol ViewCoding {
     
 }
 
-extension ViewCoding {
+public extension ViewCoding {
     
-    public func buildViewCode() {
+    func buildViewCode() {
         insertViews()
         setupConstraints()
         setupViews()

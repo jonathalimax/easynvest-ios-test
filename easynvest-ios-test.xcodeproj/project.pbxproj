@@ -27,6 +27,12 @@
 		922A8EE62270EBE60074F248 /* KeyboardListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */; };
 		922A8EE82270EC0E0074F248 /* SimulatorViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */; };
 		92F585752270EE2C0014477B /* SimulatorInputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585742270EE2C0014477B /* SimulatorInputType.swift */; };
+		92F585772270F0780014477B /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585762270F0780014477B /* Simulation.swift */; };
+		92F5857A2270FD280014477B /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585792270FD280014477B /* ConfigurableCell.swift */; };
+		92F5857C2270FE0B0014477B /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5857B2270FE0B0014477B /* TableCellConfigurator.swift */; };
+		92F5857E2270FE500014477B /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5857D2270FE500014477B /* CellConfigurator.swift */; };
+		92F585812270FF6B0014477B /* SimulatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585802270FF6B0014477B /* SimulatorViewModel.swift */; };
+		92F585832270FFD70014477B /* SimulatorItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585822270FFD70014477B /* SimulatorItemsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,12 @@
 		922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListenerDelegate.swift; sourceTree = "<group>"; };
 		922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewControllerDelegate.swift; sourceTree = "<group>"; };
 		92F585742270EE2C0014477B /* SimulatorInputType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorInputType.swift; sourceTree = "<group>"; };
+		92F585762270F0780014477B /* Simulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
+		92F585792270FD280014477B /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		92F5857B2270FE0B0014477B /* TableCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
+		92F5857D2270FE500014477B /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
+		92F585802270FF6B0014477B /* SimulatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewModel.swift; sourceTree = "<group>"; };
+		92F585822270FFD70014477B /* SimulatorItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorItemsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +157,7 @@
 				1202E546226FB09D006664BE /* Controller */,
 				1202E548226FB0B0006664BE /* Model */,
 				1202E547226FB0AB006664BE /* View */,
+				92F5857F2270FF580014477B /* ViewModel */,
 			);
 			path = Simulator;
 			sourceTree = "<group>";
@@ -165,6 +178,7 @@
 				1202E557226FBC5A006664BE /* SimulatorInputView.swift */,
 				1202E54B226FB709006664BE /* SimulatorResultViewScreen.swift */,
 				1202E549226FB696006664BE /* SimulatorViewScreen.swift */,
+				92F585822270FFD70014477B /* SimulatorItemsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +188,7 @@
 			children = (
 				1202E559226FC08F006664BE /* SimulatorCoordinator.swift */,
 				92F585742270EE2C0014477B /* SimulatorInputType.swift */,
+				92F585762270F0780014477B /* Simulation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +215,7 @@
 		1202E553226FB7F8006664BE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				92F585782270FD100014477B /* TableView */,
 				1202E554226FB815006664BE /* ViewCoding.swift */,
 				1202E560226FEFF3006664BE /* KeyboardListener.swift */,
 				922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */,
@@ -221,6 +237,24 @@
 				1202E563226FF098006664BE /* Notification+keyboard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		92F585782270FD100014477B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				92F5857D2270FE500014477B /* CellConfigurator.swift */,
+				92F585792270FD280014477B /* ConfigurableCell.swift */,
+				92F5857B2270FE0B0014477B /* TableCellConfigurator.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		92F5857F2270FF580014477B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				92F585802270FF6B0014477B /* SimulatorViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,17 +373,23 @@
 				1202E54C226FB709006664BE /* SimulatorResultViewScreen.swift in Sources */,
 				1202E561226FEFF3006664BE /* KeyboardListener.swift in Sources */,
 				1202E558226FBC5A006664BE /* SimulatorInputView.swift in Sources */,
+				92F585772270F0780014477B /* Simulation.swift in Sources */,
 				1202E55D226FDB4A006664BE /* PrettyButton.swift in Sources */,
 				1202E545226FB094006664BE /* SimulatorResultViewController.swift in Sources */,
 				92F585752270EE2C0014477B /* SimulatorInputType.swift in Sources */,
 				1202E555226FB815006664BE /* ViewCoding.swift in Sources */,
+				92F5857E2270FE500014477B /* CellConfigurator.swift in Sources */,
+				92F5857C2270FE0B0014477B /* TableCellConfigurator.swift in Sources */,
+				92F585812270FF6B0014477B /* SimulatorViewModel.swift in Sources */,
 				1202E53F226FAFC9006664BE /* AppCoordinator.swift in Sources */,
 				1202E527226F99BE006664BE /* AppDelegate.swift in Sources */,
 				1202E54A226FB696006664BE /* SimulatorViewScreen.swift in Sources */,
 				922A8EE82270EC0E0074F248 /* SimulatorViewControllerDelegate.swift in Sources */,
+				92F5857A2270FD280014477B /* ConfigurableCell.swift in Sources */,
 				1202E541226FAFF2006664BE /* Coordinator.swift in Sources */,
 				1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */,
 				922A8EE62270EBE60074F248 /* KeyboardListenerDelegate.swift in Sources */,
+				92F585832270FFD70014477B /* SimulatorItemsCell.swift in Sources */,
 				1202E543226FB080006664BE /* SimulatorViewController.swift in Sources */,
 				1202E55A226FC08F006664BE /* SimulatorCoordinator.swift in Sources */,
 			);

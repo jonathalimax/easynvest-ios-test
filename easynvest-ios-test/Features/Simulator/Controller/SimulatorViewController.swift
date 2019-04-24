@@ -50,12 +50,11 @@ public class SimulatorViewController: UIViewController {
 extension SimulatorViewController: KeyboardListenerDelegate {
     
     public func keyboardWillAppear(_ notification: Notification) {
-        simulatorViewScreen.frame.origin.y =
-            simulatorViewScreen.frame.origin.y - notification.keyboardHeight
+        // TODO: Implement solution
     }
     
     public func keyboardWillDisappear(_ notification: Notification) {
-        simulatorViewScreen.frame.origin.y = 0.0
+        // TODO: Implement solution
     }
     
 }
