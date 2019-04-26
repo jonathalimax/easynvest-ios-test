@@ -1,0 +1,9 @@
+{
+  "commitish" : "6.9.0",
+  "iOS" : [
+    {
+      "name" : "Nimble_Snapshots",
+      "hash" : "b097e2eb641db7f8ba6f96339e08b099baae637b7500359c47202906c5b8293b"
+    }
+  ]
+}

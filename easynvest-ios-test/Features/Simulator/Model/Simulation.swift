@@ -31,7 +31,7 @@ struct SimulationResult: Codable {
     let grossAmountProfit: Double
     let taxesAmount: Double
     let taxesRate: Double
-    let netAmountProfit: Double
+    let netAmount: Double
     let monthlyGrossRateProfit: Double
     let rateProfit: Double
     let investmentParameter: SimulationResultParameter
@@ -44,6 +44,6 @@ struct SimulationResultParameter: Codable {
     let maturityDate: String
     let maturityTotalDays: Int
     let rate: Double
-    let yearlyInterestRate: Double
+    let annualGrossRateProfit: Double
     
 }

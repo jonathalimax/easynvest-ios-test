@@ -10,8 +10,6 @@ import UIKit
 
 public class SimulatorResultViewScreen: UIView {
     
-    internal let viewModel: SimulatorViewModel
-    
     public lazy var resultTableView: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = UITableView.automaticDimension
@@ -21,7 +19,6 @@ public class SimulatorResultViewScreen: UIView {
     }()
     
     init() {
-        viewModel = SimulatorViewModel()
         super.init(frame: .zero)
         buildViewCode()
     }

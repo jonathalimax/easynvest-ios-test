@@ -26,14 +26,30 @@
 		1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E563226FF098006664BE /* Notification+keyboard.swift */; };
 		922A8EE62270EBE60074F248 /* KeyboardListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */; };
 		922A8EE82270EC0E0074F248 /* SimulatorViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */; };
+		928248F022736DE500134BCB /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F5859C22736BCA0014477B /* FBSnapshotTestCase.framework */; };
+		928248F122736DE500134BCB /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F5859D22736BCA0014477B /* Nimble_Snapshots.framework */; };
+		928248F222736DE500134BCB /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F5859E22736BCA0014477B /* Nimble.framework */; };
+		928248F322736DE500134BCB /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F5859B22736BCA0014477B /* Quick.framework */; };
+		928248F5227376FA00134BCB /* SimulatorItemViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928248F4227376FA00134BCB /* SimulatorItemViewSpec.swift */; };
+		928248F92273B17600134BCB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928248F82273B17600134BCB /* Result.swift */; };
+		928249072273B71500134BCB /* SimulateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928249062273B71500134BCB /* SimulateService.swift */; };
 		92F585752270EE2C0014477B /* SimulatorInputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585742270EE2C0014477B /* SimulatorInputType.swift */; };
 		92F585772270F0780014477B /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585762270F0780014477B /* Simulation.swift */; };
-		92F5857A2270FD280014477B /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585792270FD280014477B /* ConfigurableCell.swift */; };
-		92F5857C2270FE0B0014477B /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5857B2270FE0B0014477B /* TableCellConfigurator.swift */; };
-		92F5857E2270FE500014477B /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5857D2270FE500014477B /* CellConfigurator.swift */; };
-		92F585812270FF6B0014477B /* SimulatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585802270FF6B0014477B /* SimulatorViewModel.swift */; };
-		92F585832270FFD70014477B /* SimulatorItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585822270FFD70014477B /* SimulatorItemsCell.swift */; };
+		92F585812270FF6B0014477B /* SimulatorResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585802270FF6B0014477B /* SimulatorResultViewModel.swift */; };
+		92F585832270FFD70014477B /* SimulatorItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585822270FFD70014477B /* SimulatorItemView.swift */; };
+		92F585862273651B0014477B /* SimulatorResultHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585852273651B0014477B /* SimulatorResultHeaderView.swift */; };
+		92F5859A22736ADA0014477B /* SimulatorResultHeaderViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5859922736ADA0014477B /* SimulatorResultHeaderViewSpec.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92F5859022736A880014477B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1202E51B226F99BE006664BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1202E522226F99BE006664BE;
+			remoteInfo = "easynvest-ios-test";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1202E523226F99BE006664BE /* easynvest-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easynvest-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,13 +73,21 @@
 		1202E563226FF098006664BE /* Notification+keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+keyboard.swift"; sourceTree = "<group>"; };
 		922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListenerDelegate.swift; sourceTree = "<group>"; };
 		922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewControllerDelegate.swift; sourceTree = "<group>"; };
+		928248F4227376FA00134BCB /* SimulatorItemViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorItemViewSpec.swift; sourceTree = "<group>"; };
+		928248F82273B17600134BCB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		928249062273B71500134BCB /* SimulateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateService.swift; sourceTree = "<group>"; };
 		92F585742270EE2C0014477B /* SimulatorInputType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorInputType.swift; sourceTree = "<group>"; };
 		92F585762270F0780014477B /* Simulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
-		92F585792270FD280014477B /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
-		92F5857B2270FE0B0014477B /* TableCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
-		92F5857D2270FE500014477B /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
-		92F585802270FF6B0014477B /* SimulatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewModel.swift; sourceTree = "<group>"; };
-		92F585822270FFD70014477B /* SimulatorItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorItemsCell.swift; sourceTree = "<group>"; };
+		92F585802270FF6B0014477B /* SimulatorResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultViewModel.swift; sourceTree = "<group>"; };
+		92F585822270FFD70014477B /* SimulatorItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorItemView.swift; sourceTree = "<group>"; };
+		92F585852273651B0014477B /* SimulatorResultHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultHeaderView.swift; sourceTree = "<group>"; };
+		92F5858B22736A870014477B /* easynvest-ios-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "easynvest-ios-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F5858F22736A880014477B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F5859922736ADA0014477B /* SimulatorResultHeaderViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultHeaderViewSpec.swift; sourceTree = "<group>"; };
+		92F5859B22736BCA0014477B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		92F5859C22736BCA0014477B /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		92F5859D22736BCA0014477B /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
+		92F5859E22736BCA0014477B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +95,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1202E550226FB7B5006664BE /* Alamofire.framework in Frameworks */,
 				1202E551226FB7B5006664BE /* SnapKit.framework in Frameworks */,
+				1202E550226FB7B5006664BE /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92F5858822736A870014477B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928248F022736DE500134BCB /* FBSnapshotTestCase.framework in Frameworks */,
+				928248F122736DE500134BCB /* Nimble_Snapshots.framework in Frameworks */,
+				928248F222736DE500134BCB /* Nimble.framework in Frameworks */,
+				928248F322736DE500134BCB /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				1202E525226F99BE006664BE /* easynvest-ios-test */,
+				92F5858C22736A880014477B /* easynvest-ios-testTests */,
 				1202E524226F99BE006664BE /* Products */,
 				1202E54D226FB7B5006664BE /* Frameworks */,
 			);
@@ -92,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				1202E523226F99BE006664BE /* easynvest-ios-test.app */,
+				92F5858B22736A870014477B /* easynvest-ios-testTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +136,6 @@
 		1202E525226F99BE006664BE /* easynvest-ios-test */ = {
 			isa = PBXGroup;
 			children = (
-				1202E539226FAB85006664BE /* API */,
 				1202E53A226FAB89006664BE /* Features */,
 				1202E53B226FABAA006664BE /* Resources */,
 				1202E538226FAB68006664BE /* Setup */,
@@ -116,13 +152,6 @@
 				1202E53C226FADD3006664BE /* Flow */,
 			);
 			path = Setup;
-			sourceTree = "<group>";
-		};
-		1202E539226FAB85006664BE /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		1202E53A226FAB89006664BE /* Features */ = {
@@ -154,6 +183,7 @@
 		1202E53D226FAE35006664BE /* Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				928249052273B70300134BCB /* Service */,
 				1202E546226FB09D006664BE /* Controller */,
 				1202E548226FB0B0006664BE /* Model */,
 				1202E547226FB0AB006664BE /* View */,
@@ -176,9 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				1202E557226FBC5A006664BE /* SimulatorInputView.swift */,
+				92F585822270FFD70014477B /* SimulatorItemView.swift */,
 				1202E54B226FB709006664BE /* SimulatorResultViewScreen.swift */,
 				1202E549226FB696006664BE /* SimulatorViewScreen.swift */,
-				92F585822270FFD70014477B /* SimulatorItemsCell.swift */,
+				92F58584227364F70014477B /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +227,10 @@
 		1202E54D226FB7B5006664BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92F5859C22736BCA0014477B /* FBSnapshotTestCase.framework */,
+				92F5859D22736BCA0014477B /* Nimble_Snapshots.framework */,
+				92F5859E22736BCA0014477B /* Nimble.framework */,
+				92F5859B22736BCA0014477B /* Quick.framework */,
 				1202E54E226FB7B5006664BE /* Alamofire.framework */,
 				1202E54F226FB7B5006664BE /* SnapKit.framework */,
 			);
@@ -215,10 +250,10 @@
 		1202E553226FB7F8006664BE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				92F585782270FD100014477B /* TableView */,
 				1202E554226FB815006664BE /* ViewCoding.swift */,
 				1202E560226FEFF3006664BE /* KeyboardListener.swift */,
 				922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */,
+				928248F82273B17600134BCB /* Result.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -239,22 +274,70 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		92F585782270FD100014477B /* TableView */ = {
+		928249052273B70300134BCB /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				92F5857D2270FE500014477B /* CellConfigurator.swift */,
-				92F585792270FD280014477B /* ConfigurableCell.swift */,
-				92F5857B2270FE0B0014477B /* TableCellConfigurator.swift */,
+				928249062273B71500134BCB /* SimulateService.swift */,
 			);
-			path = TableView;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		92F5857F2270FF580014477B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				92F585802270FF6B0014477B /* SimulatorViewModel.swift */,
+				92F585802270FF6B0014477B /* SimulatorResultViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		92F58584227364F70014477B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92F585852273651B0014477B /* SimulatorResultHeaderView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		92F5858C22736A880014477B /* easynvest-ios-testTests */ = {
+			isa = PBXGroup;
+			children = (
+				92F5859522736A990014477B /* Features */,
+				92F5858F22736A880014477B /* Info.plist */,
+			);
+			path = "easynvest-ios-testTests";
+			sourceTree = "<group>";
+		};
+		92F5859522736A990014477B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				92F5859622736AA30014477B /* Simulator */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		92F5859622736AA30014477B /* Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				92F5859722736AAA0014477B /* View */,
+			);
+			path = Simulator;
+			sourceTree = "<group>";
+		};
+		92F5859722736AAA0014477B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92F5859822736AB00014477B /* Cell */,
+				928248F4227376FA00134BCB /* SimulatorItemViewSpec.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92F5859822736AB00014477B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92F5859922736ADA0014477B /* SimulatorResultHeaderViewSpec.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,18 +362,42 @@
 			productReference = 1202E523226F99BE006664BE /* easynvest-ios-test.app */;
 			productType = "com.apple.product-type.application";
 		};
+		92F5858A22736A870014477B /* easynvest-ios-testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92F5859222736A880014477B /* Build configuration list for PBXNativeTarget "easynvest-ios-testTests" */;
+			buildPhases = (
+				92F5858722736A870014477B /* Sources */,
+				92F5858822736A870014477B /* Frameworks */,
+				92F5858922736A870014477B /* Resources */,
+				928248EF22736D1B00134BCB /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92F5859122736A880014477B /* PBXTargetDependency */,
+			);
+			name = "easynvest-ios-testTests";
+			productName = "easynvest-ios-testTests";
+			productReference = 92F5858B22736A870014477B /* easynvest-ios-testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1202E51B226F99BE006664BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = anonymous;
 				TargetAttributes = {
 					1202E522226F99BE006664BE = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					92F5858A22736A870014477B = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						TestTargetID = 1202E522226F99BE006664BE;
 					};
 				};
 			};
@@ -308,6 +415,7 @@
 			projectRoot = "";
 			targets = (
 				1202E522226F99BE006664BE /* easynvest-ios-test */,
+				92F5858A22736A870014477B /* easynvest-ios-testTests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,6 +427,13 @@
 			files = (
 				1202E531226F99BF006664BE /* LaunchScreen.storyboard in Resources */,
 				1202E52E226F99BF006664BE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92F5858922736A870014477B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +478,28 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		928248EF22736D1B00134BCB /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble_Snapshots.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSnapshotTestCase.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -378,24 +515,41 @@
 				1202E545226FB094006664BE /* SimulatorResultViewController.swift in Sources */,
 				92F585752270EE2C0014477B /* SimulatorInputType.swift in Sources */,
 				1202E555226FB815006664BE /* ViewCoding.swift in Sources */,
-				92F5857E2270FE500014477B /* CellConfigurator.swift in Sources */,
-				92F5857C2270FE0B0014477B /* TableCellConfigurator.swift in Sources */,
-				92F585812270FF6B0014477B /* SimulatorViewModel.swift in Sources */,
+				92F585812270FF6B0014477B /* SimulatorResultViewModel.swift in Sources */,
+				928248F92273B17600134BCB /* Result.swift in Sources */,
+				928249072273B71500134BCB /* SimulateService.swift in Sources */,
 				1202E53F226FAFC9006664BE /* AppCoordinator.swift in Sources */,
 				1202E527226F99BE006664BE /* AppDelegate.swift in Sources */,
 				1202E54A226FB696006664BE /* SimulatorViewScreen.swift in Sources */,
+				92F585862273651B0014477B /* SimulatorResultHeaderView.swift in Sources */,
 				922A8EE82270EC0E0074F248 /* SimulatorViewControllerDelegate.swift in Sources */,
-				92F5857A2270FD280014477B /* ConfigurableCell.swift in Sources */,
 				1202E541226FAFF2006664BE /* Coordinator.swift in Sources */,
 				1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */,
 				922A8EE62270EBE60074F248 /* KeyboardListenerDelegate.swift in Sources */,
-				92F585832270FFD70014477B /* SimulatorItemsCell.swift in Sources */,
+				92F585832270FFD70014477B /* SimulatorItemView.swift in Sources */,
 				1202E543226FB080006664BE /* SimulatorViewController.swift in Sources */,
 				1202E55A226FC08F006664BE /* SimulatorCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92F5858722736A870014477B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928248F5227376FA00134BCB /* SimulatorItemViewSpec.swift in Sources */,
+				92F5859A22736ADA0014477B /* SimulatorResultHeaderViewSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92F5859122736A880014477B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1202E522226F99BE006664BE /* easynvest-ios-test */;
+			targetProxy = 92F5859022736A880014477B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1202E52F226F99BF006664BE /* LaunchScreen.storyboard */ = {
@@ -543,7 +697,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -566,8 +720,63 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92F5859322736A880014477B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "easynvest-ios-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easynvest-ios-test.app/easynvest-ios-test";
+			};
+			name = Debug;
+		};
+		92F5859422736A880014477B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "easynvest-ios-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easynvest-ios-test.app/easynvest-ios-test";
 			};
 			name = Release;
 		};
@@ -588,6 +797,15 @@
 			buildConfigurations = (
 				1202E536226F99BF006664BE /* Debug */,
 				1202E537226F99BF006664BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92F5859222736A880014477B /* Build configuration list for PBXNativeTarget "easynvest-ios-testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92F5859322736A880014477B /* Debug */,
+				92F5859422736A880014477B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,9 +11,11 @@ import UIKit
 public class SimulatorResultViewController: UIViewController {
     
     private var simulatorResultViewScreen: SimulatorResultViewScreen
+    private let sectionsAmount: Int
     
     init() {
         simulatorResultViewScreen = SimulatorResultViewScreen()
+        sectionsAmount = 4
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,6 +31,49 @@ public class SimulatorResultViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Simulador"
+    }
+    
+}
+
+extension SimulatorResultViewController: UITableViewDataSource {
+    
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionsAmount
+    }
+    
+    public func tableView(_ tableView: UITableView,
+                          numberOfRowsInSection section: Int) -> Int {
+        
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 0
+        case 2:
+            return 0
+        case 3:
+            return 0
+        default:
+            return 0
+        }
+    }
+    
+    public func tableView(_ tableView: UITableView,
+                          cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch indexPath.section {
+        case 0:
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? SimulatorResultHeaderView {
+                //cell.resultViewModel = SimulatorResultViewModel(simulation: )
+                return cell
+            }
+            
+        default:
+            break
+        }
+        
+        fatalError("The section index not found")
     }
     
 }
