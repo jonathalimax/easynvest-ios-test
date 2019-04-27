@@ -10,6 +10,7 @@ import UIKit
 
 public class SimulatorViewScreen: UIView {
     
+    public var simulation: Simulation
     public var simulateAction: (() -> Void)?
     
     private lazy var stackView: UIStackView = {
@@ -24,6 +25,7 @@ public class SimulatorViewScreen: UIView {
             SimulatorInputView(title: "Quanto você gostaria de aplicar? *",
                                placeholder: "R$",
                                type: .numeric)
+        simulatorInputView.delegate = self
         return simulatorInputView
     }()
     
@@ -31,6 +33,7 @@ public class SimulatorViewScreen: UIView {
         let simulatorInputView =
             SimulatorInputView(title: "Qual a data de vencimento do investimento? *",
                                placeholder: "dia/mês/ano")
+        simulatorInputView.delegate = self
         return simulatorInputView
     }()
     
@@ -38,6 +41,7 @@ public class SimulatorViewScreen: UIView {
         let simulatorInputView =
             SimulatorInputView(title: "Qual o percentual do CDI do investimento? *",
                                placeholder: "100%")
+        simulatorInputView.delegate = self
         return simulatorInputView
     }()
     
@@ -52,6 +56,7 @@ public class SimulatorViewScreen: UIView {
     }()
     
     init() {
+        simulation = Simulation()
         super.init(frame: .zero)
         buildViewCode()
     }
@@ -95,6 +100,28 @@ extension SimulatorViewScreen: ViewCoding {
     public func setupViews() {
         self.backgroundColor = .red
         simulateButton.cornerRadius = 25
+    }
+    
+}
+
+extension SimulatorViewScreen: SimulatorInputViewDelegate {
+    
+    func simulatorInputView(_ simulatorInputView: SimulatorInputView,
+                            textField: UITextField,
+                            didCompleteTyping text: String) {
+        
+        switch simulatorInputView {
+        case self.moneyInputView:
+            simulation.investedAmount = text
+        case self.maturityInputView:
+            simulation.maturityDate = text
+        case self.CDIPercentageInputView:
+            if let rate = Int(text) {
+                simulation.rate = rate
+            }
+        default:
+            break
+        }
     }
     
 }

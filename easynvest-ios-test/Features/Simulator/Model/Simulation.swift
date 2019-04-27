@@ -8,42 +8,20 @@
 
 import CoreGraphics
 
-struct Simulation {
+public class Simulation {
     
-    let input: SimulationInput
-    let result: String
+    var investedAmount: String
+    var maturityDate: String
+    var rate: Int
+    var index: String
+    var isTaxFree: Bool
     
-}
-
-struct SimulationInput: Codable {
-    
-    let investedAmount: String
-    let maturityDate: String
-    let index: String
-    let rate: Int = 123
-    let isTaxFree: Bool = false
-    
-}
-
-struct SimulationResult: Codable {
-    
-    let grossAmount: Double
-    let grossAmountProfit: Double
-    let taxesAmount: Double
-    let taxesRate: Double
-    let netAmount: Double
-    let monthlyGrossRateProfit: Double
-    let rateProfit: Double
-    let investmentParameter: SimulationResultParameter
-    
-}
-
-struct SimulationResultParameter: Codable {
-    
-    let investedAmount: Double
-    let maturityDate: String
-    let maturityTotalDays: Int
-    let rate: Double
-    let annualGrossRateProfit: Double
+    init() {
+        investedAmount = ""
+        maturityDate = ""
+        rate = 0
+        index = "CDI"
+        isTaxFree = true
+    }
     
 }

@@ -9,12 +9,15 @@
 import UIKit
 
 public class SimulatorViewController: UIViewController {
-
-    private var simulatorViewScreen: SimulatorViewScreen
-    public weak var delegate: SimulatorViewControllerDelegate?
     
-    init() {
-        simulatorViewScreen = SimulatorViewScreen()
+    weak var delegate: SimulatorViewControllerDelegate?
+    
+    private var simulatorViewScreen: SimulatorViewScreen
+    private var simulateService: SimulateService
+    
+    init(simulateService: SimulateService = SimulateService()) {
+        self.simulatorViewScreen = SimulatorViewScreen()
+        self.simulateService = simulateService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,8 +33,9 @@ public class SimulatorViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Simulador"
+        
         simulatorViewScreen.simulateAction = {
-            self.delegate?.simulatorViewControllerDidTapSimulate(self)
+            self.fetchSimulation(self.simulatorViewScreen.simulation)
         }
     }
     
@@ -43,6 +47,24 @@ public class SimulatorViewController: UIViewController {
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         KeyboardListener.shared.remove(self)
+    }
+    
+}
+
+private extension SimulatorViewController {
+    
+    func fetchSimulation(_ simulation: Simulation) {
+        
+        simulateService.get(simulation: simulation,
+                            completion: { [weak self] result in
+            
+            guard let sSelf = self, let result = result else {
+                return
+            }
+            sSelf.delegate?.simulatorViewController(sSelf,
+                                                    didSuccessfully: result)
+        })
+        
     }
     
 }

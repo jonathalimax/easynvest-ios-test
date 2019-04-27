@@ -10,27 +10,45 @@ import Alamofire
 
 public struct SimulateService {
     
-    func get(params: Simulation, completion: @escaping (SimulationResult?) -> Void) {
+    func get(simulation: Simulation, completion: @escaping (SimulationResponse?) -> Void) {
         
-        guard let url =
-            URL(string: "https://api-simulator-calc.easynvest.com.br/calculator/simulate") else {
-                completion(nil)
-                return
+        var components = BaseURL.shared.url
+        components.path = APIRoute.simulation.rawValue
+        
+        components.queryItems = [
+            URLQueryItem(name: "investedAmount", value: simulation.investedAmount),
+            URLQueryItem(name: "index", value: simulation.index),
+            URLQueryItem(name: "rate", value: "\(simulation.rate)"),
+            URLQueryItem(name: "isTaxFree", value: "\(simulation.isTaxFree)"),
+            URLQueryItem(name: "maturityDate", value: simulation.maturityDate)
+        ]
+        
+        guard let url = components.url else {
+            completion(nil)
+            return
         }
         
-        Alamofire.request(url,
-                          method: .get,
-                          parameters: params)
-            .validate()
-            .responseJSON { response in
+        Alamofire.request(url).validate().responseJSON { result in
+            let decoder = JSONDecoder()
+            
+            guard let data = result.data else {
+                completion(nil)
+                return
+            }
+            
+            do {
                 
-                guard response.result.isSuccess else {
-                    completion(nil)
-                    return
-                }
+                let response = try decoder
+                    .decode(SimulationResponse.self,
+                            from: data)
                 
-                print(response)
+                completion(response)
                 
+            } catch let err {
+                print(err.localizedDescription)
+                completion(nil)
+            }
+            
         }
         
     }

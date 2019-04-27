@@ -3,7 +3,8 @@
   "iOS" : [
     {
       "name" : "FBSnapshotTestCase",
-      "hash" : "5dbcc3d2e427cb8612d703048059bf3402e2581c39cf0026e9cfdd181790cebe"
+      "hash" : "7ec60526261a009085cf1206f5429a6922063a87be06c3e4a868d84137c8220b",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ]
 }

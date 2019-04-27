@@ -6,8 +6,7 @@
 //  Copyright © 2019 anonymous. All rights reserved.
 //
 
-import Foundation
-
-public protocol SimulatorViewControllerDelegate: AnyObject {
-    func simulatorViewControllerDidTapSimulate(_ viewController: SimulatorViewController)
+protocol SimulatorViewControllerDelegate: AnyObject {
+    func simulatorViewController(_ viewController: SimulatorViewController,
+                                 didSuccessfully simulation: SimulationResponse)
 }

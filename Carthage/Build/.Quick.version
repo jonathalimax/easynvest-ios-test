@@ -1,9 +1,10 @@
 {
-  "commitish" : "v1.3.2",
+  "commitish" : "v2.1.0",
   "iOS" : [
     {
       "name" : "Quick",
-      "hash" : "88fc06127c22f51bb1949792bd10183a9f3ca457fb70f365f36c59290a3e3fdc"
+      "hash" : "eafe9190011824c6be06fcdefba191c4b4396418fa418002646833416e903cd3",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ]
 }

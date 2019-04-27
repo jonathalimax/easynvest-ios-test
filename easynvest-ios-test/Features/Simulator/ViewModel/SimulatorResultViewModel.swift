@@ -22,7 +22,7 @@ public class SimulatorResultViewModel {
     let annualReturn: String
     let rateProfit: String
     
-    init(simulation: SimulationResult) {
+    init(simulation: SimulationResponse) {
         totalValue = "R$ \(simulation.grossAmount)"
         totalIncomeValue = "R$ \(simulation.grossAmountProfit)"
         investedAmount = "R$ \(simulation.investmentParameter.investedAmount)"
@@ -32,7 +32,7 @@ public class SimulatorResultViewModel {
         maturityTotalDays = "\(simulation.investmentParameter.maturityTotalDays)"
         monthlyIncome = "\(simulation.monthlyGrossRateProfit)%"
         CDIRate = "\(simulation.investmentParameter.rate)%"
-        annualReturn = "\(simulation.investmentParameter.annualGrossRateProfit)%"
+        annualReturn = "\(simulation.annualGrossRateProfit)%"
         rateProfit = "\(simulation.rateProfit)%"
     }
     

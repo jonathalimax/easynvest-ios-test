@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol SimulatorInputViewDelegate: AnyObject {
+    func simulatorInputView(_ simulatorInputView: SimulatorInputView,
+                            textField: UITextField,
+                            didCompleteTyping text: String)
+}
+
 public class SimulatorInputView: UIView {
+    
+    weak var delegate: SimulatorInputViewDelegate?
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -19,8 +27,8 @@ public class SimulatorInputView: UIView {
         return label
     }()
     
-    private lazy var answerTextView: UITextView = {
-        let textView = UITextView()
+    private lazy var answerTextField: UITextField = {
+        let textView = UITextField()
         textView.textColor = .gray
         textView.textAlignment = .center
         textView.font = .systemFont(ofSize: 24)
@@ -44,13 +52,13 @@ public class SimulatorInputView: UIView {
         super.init(frame: .zero)
         buildViewCode()
         titleLabel.text = title
-        answerTextView.text = placeholder
+        answerTextField.text = placeholder
         
         switch type {
         case .text:
-            answerTextView.keyboardType = .default
+            answerTextField.keyboardType = .default
         case .numeric:
-            answerTextView.keyboardType = .numberPad
+            answerTextField.keyboardType = .numberPad
         }
     }
     
@@ -65,7 +73,7 @@ extension SimulatorInputView: ViewCoding {
     
     public func insertViews() {
         self.addSubview(titleLabel)
-        self.addSubview(answerTextView)
+        self.addSubview(answerTextField)
         self.addSubview(bottomLineView)
     }
     
@@ -77,7 +85,7 @@ extension SimulatorInputView: ViewCoding {
             make.right.equalToSuperview().inset(16)
         }
         
-        answerTextView.snp.makeConstraints { make in
+        answerTextField.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(16)
             make.top.equalTo(titleLabel.snp.bottom)
             make.right.equalToSuperview().inset(16)
@@ -87,7 +95,7 @@ extension SimulatorInputView: ViewCoding {
         bottomLineView.snp.makeConstraints { make in
             make.height.equalTo(1)
             make.left.right.equalToSuperview()
-            make.top.equalTo(answerTextView.snp.bottom)
+            make.top.equalTo(answerTextField.snp.bottom)
             make.bottom.equalToSuperview()
         }
         
@@ -95,20 +103,31 @@ extension SimulatorInputView: ViewCoding {
     
     public func setupViews() {
         titleLabel.text = "titleLabel"
-        answerTextView.text = "answerTextView"
-        answerTextView.autocorrectionType = .no
-        answerTextView.delegate = self
+        answerTextField.text = "answerTextView"
+        answerTextField.autocorrectionType = .no
+        answerTextField.delegate = self
     }
     
 }
 
-extension SimulatorInputView: UITextViewDelegate {
+extension SimulatorInputView: UITextFieldDelegate {
     
-    public func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == .gray {
-            textView.text = nil
-            textView.textColor = .black
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.textColor == .gray {
+            textField.text = nil
+            textField.textColor = .black
         }
+    }
+
+    public func textFieldDidEndEditing(_ textField: UITextField,
+                                       reason: UITextField.DidEndEditingReason) {
+        
+        if let text = textField.text, !text.isEmpty {
+            delegate?.simulatorInputView(self,
+                                         textField: textField,
+                                         didCompleteTyping: text)
+        }
+        
     }
     
 }

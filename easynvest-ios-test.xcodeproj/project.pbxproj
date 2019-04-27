@@ -24,6 +24,9 @@
 		1202E55D226FDB4A006664BE /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E55C226FDB4A006664BE /* PrettyButton.swift */; };
 		1202E561226FEFF3006664BE /* KeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E560226FEFF3006664BE /* KeyboardListener.swift */; };
 		1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E563226FF098006664BE /* Notification+keyboard.swift */; };
+		120755ED2274BF9F0087970C /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120755EC2274BF9F0087970C /* BaseURL.swift */; };
+		121A8C802274E7840002BFF3 /* SimulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A8C7F2274E7840002BFF3 /* SimulationResponse.swift */; };
+		121A8C822274E81A0002BFF3 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A8C812274E81A0002BFF3 /* APIRoute.swift */; };
 		922A8EE62270EBE60074F248 /* KeyboardListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */; };
 		922A8EE82270EC0E0074F248 /* SimulatorViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */; };
 		928248F022736DE500134BCB /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F5859C22736BCA0014477B /* FBSnapshotTestCase.framework */; };
@@ -71,6 +74,9 @@
 		1202E55C226FDB4A006664BE /* PrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButton.swift; sourceTree = "<group>"; };
 		1202E560226FEFF3006664BE /* KeyboardListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListener.swift; sourceTree = "<group>"; };
 		1202E563226FF098006664BE /* Notification+keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+keyboard.swift"; sourceTree = "<group>"; };
+		120755EC2274BF9F0087970C /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		121A8C7F2274E7840002BFF3 /* SimulationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResponse.swift; sourceTree = "<group>"; };
+		121A8C812274E81A0002BFF3 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
 		922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListenerDelegate.swift; sourceTree = "<group>"; };
 		922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewControllerDelegate.swift; sourceTree = "<group>"; };
 		928248F4227376FA00134BCB /* SimulatorItemViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorItemViewSpec.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1202E53A226FAB89006664BE /* Features */,
+				120755EB2274BF820087970C /* Network */,
 				1202E53B226FABAA006664BE /* Resources */,
 				1202E538226FAB68006664BE /* Setup */,
 				1202E552226FB7D8006664BE /* Shared */,
@@ -195,8 +202,8 @@
 		1202E546226FB09D006664BE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1202E542226FB080006664BE /* SimulatorViewController.swift */,
 				1202E544226FB094006664BE /* SimulatorResultViewController.swift */,
+				1202E542226FB080006664BE /* SimulatorViewController.swift */,
 				922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */,
 			);
 			path = Controller;
@@ -217,9 +224,10 @@
 		1202E548226FB0B0006664BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92F585762270F0780014477B /* Simulation.swift */,
+				121A8C7F2274E7840002BFF3 /* SimulationResponse.swift */,
 				1202E559226FC08F006664BE /* SimulatorCoordinator.swift */,
 				92F585742270EE2C0014477B /* SimulatorInputType.swift */,
-				92F585762270F0780014477B /* Simulation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +280,15 @@
 				1202E563226FF098006664BE /* Notification+keyboard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		120755EB2274BF820087970C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				120755EC2274BF9F0087970C /* BaseURL.swift */,
+				121A8C812274E81A0002BFF3 /* APIRoute.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		928249052273B70300134BCB /* Service */ = {
@@ -393,10 +410,11 @@
 				TargetAttributes = {
 					1202E522226F99BE006664BE = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					92F5858A22736A870014477B = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						TestTargetID = 1202E522226F99BE006664BE;
 					};
 				};
@@ -514,7 +532,9 @@
 				1202E55D226FDB4A006664BE /* PrettyButton.swift in Sources */,
 				1202E545226FB094006664BE /* SimulatorResultViewController.swift in Sources */,
 				92F585752270EE2C0014477B /* SimulatorInputType.swift in Sources */,
+				121A8C802274E7840002BFF3 /* SimulationResponse.swift in Sources */,
 				1202E555226FB815006664BE /* ViewCoding.swift in Sources */,
+				121A8C822274E81A0002BFF3 /* APIRoute.swift in Sources */,
 				92F585812270FF6B0014477B /* SimulatorResultViewModel.swift in Sources */,
 				928248F92273B17600134BCB /* Result.swift in Sources */,
 				928249072273B71500134BCB /* SimulateService.swift in Sources */,
@@ -528,6 +548,7 @@
 				922A8EE62270EBE60074F248 /* KeyboardListenerDelegate.swift in Sources */,
 				92F585832270FFD70014477B /* SimulatorItemView.swift in Sources */,
 				1202E543226FB080006664BE /* SimulatorViewController.swift in Sources */,
+				120755ED2274BF9F0087970C /* BaseURL.swift in Sources */,
 				1202E55A226FC08F006664BE /* SimulatorCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,7 +718,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -720,7 +741,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -747,7 +768,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easynvest-ios-test.app/easynvest-ios-test";
 			};
@@ -774,7 +795,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.easynvest-ios-testTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easynvest-ios-test.app/easynvest-ios-test";
 			};
