@@ -26,6 +26,8 @@
 		1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E563226FF098006664BE /* Notification+keyboard.swift */; };
 		120755ED2274BF9F0087970C /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120755EC2274BF9F0087970C /* BaseURL.swift */; };
 		121249DA22752ACF0066807B /* SimulatorOthersInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121249D922752ACF0066807B /* SimulatorOthersInfoCell.swift */; };
+		121249E2227576210066807B /* SimulatorResultHeaderCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121249E1227576210066807B /* SimulatorResultHeaderCellSpec.swift */; };
+		121249E42275766E0066807B /* SimulatorInputViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121249E32275766E0066807B /* SimulatorInputViewSpec.swift */; };
 		121A8C802274E7840002BFF3 /* SimulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A8C7F2274E7840002BFF3 /* SimulationResponse.swift */; };
 		121A8C822274E81A0002BFF3 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A8C812274E81A0002BFF3 /* APIRoute.swift */; };
 		121A8C8622751E860002BFF3 /* SimulatorMainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A8C8522751E860002BFF3 /* SimulatorMainInfoCell.swift */; };
@@ -43,7 +45,6 @@
 		92F585812270FF6B0014477B /* SimulatorResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585802270FF6B0014477B /* SimulatorResultViewModel.swift */; };
 		92F585832270FFD70014477B /* SimulatorItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585822270FFD70014477B /* SimulatorItemView.swift */; };
 		92F585862273651B0014477B /* SimulatorResultHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585852273651B0014477B /* SimulatorResultHeaderCell.swift */; };
-		92F5859A22736ADA0014477B /* SimulatorResultHeaderViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5859922736ADA0014477B /* SimulatorResultHeaderViewSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		1202E563226FF098006664BE /* Notification+keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+keyboard.swift"; sourceTree = "<group>"; };
 		120755EC2274BF9F0087970C /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		121249D922752ACF0066807B /* SimulatorOthersInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorOthersInfoCell.swift; sourceTree = "<group>"; };
+		121249E1227576210066807B /* SimulatorResultHeaderCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorResultHeaderCellSpec.swift; sourceTree = "<group>"; };
+		121249E32275766E0066807B /* SimulatorInputViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorInputViewSpec.swift; sourceTree = "<group>"; };
 		121A8C7F2274E7840002BFF3 /* SimulationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResponse.swift; sourceTree = "<group>"; };
 		121A8C812274E81A0002BFF3 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
 		121A8C8522751E860002BFF3 /* SimulatorMainInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorMainInfoCell.swift; sourceTree = "<group>"; };
@@ -93,7 +96,6 @@
 		92F585852273651B0014477B /* SimulatorResultHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultHeaderCell.swift; sourceTree = "<group>"; };
 		92F5858B22736A870014477B /* easynvest-ios-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "easynvest-ios-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F5858F22736A880014477B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92F5859922736ADA0014477B /* SimulatorResultHeaderViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultHeaderViewSpec.swift; sourceTree = "<group>"; };
 		92F5859B22736BCA0014477B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		92F5859C22736BCA0014477B /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		92F5859D22736BCA0014477B /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
@@ -349,8 +351,9 @@
 		92F5859722736AAA0014477B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				92F5859822736AB00014477B /* Cell */,
+				121249E32275766E0066807B /* SimulatorInputViewSpec.swift */,
 				928248F4227376FA00134BCB /* SimulatorItemViewSpec.swift */,
+				92F5859822736AB00014477B /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,7 +361,7 @@
 		92F5859822736AB00014477B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				92F5859922736ADA0014477B /* SimulatorResultHeaderViewSpec.swift */,
+				121249E1227576210066807B /* SimulatorResultHeaderCellSpec.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -566,7 +569,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				928248F5227376FA00134BCB /* SimulatorItemViewSpec.swift in Sources */,
-				92F5859A22736ADA0014477B /* SimulatorResultHeaderViewSpec.swift in Sources */,
+				121249E42275766E0066807B /* SimulatorInputViewSpec.swift in Sources */,
+				121249E2227576210066807B /* SimulatorResultHeaderCellSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

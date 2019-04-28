@@ -13,7 +13,7 @@ public class SimulatorResultHeaderCell: UITableViewCell {
     var resultViewModel: SimulatorResultViewModel? {
         didSet {
             totalValueLabel.text = resultViewModel?.totalValue
-            totalIncomeLabel.text = resultViewModel?.totalIncomeValue
+            totalIncomeValueLabel.text = resultViewModel?.totalIncomeValue
         }
     }
     
@@ -35,7 +35,7 @@ public class SimulatorResultHeaderCell: UITableViewCell {
     
     private lazy var totalIncomeStack: UIStackView = {
         let stackView = UIStackView()
-        stackView.spacing = 2
+        stackView.spacing = 3
         stackView.distribution = .fillProportionally
         return stackView
     }()
@@ -93,7 +93,7 @@ extension SimulatorResultHeaderCell: ViewCoding {
         
         totalIncomeStack.snp.makeConstraints { make in
             make.top.equalTo(totalValueLabel.snp.bottom).offset(4)
-            make.left.right.equalToSuperview()
+            make.centerX.equalToSuperview()
         }
         
     }

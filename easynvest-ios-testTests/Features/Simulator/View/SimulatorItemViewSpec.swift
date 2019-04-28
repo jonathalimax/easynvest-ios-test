@@ -30,7 +30,7 @@ class SimulatorItemViewSpec: QuickSpec {
                 
                 it("must render properly") {
                     
-                    expect(sut).to(haveValidSnapshot(named: "SimulatorResultHeaderCell"))
+                    expect(sut).to(haveValidSnapshot(named: "SimulatorItemView"))
                     
                 }
                 
