@@ -27,6 +27,18 @@ public class PrettyButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override public var isHighlighted: Bool {
+        didSet {
+            UIView.animate(withDuration: 0.25,
+                           delay: 0,
+                           options: [.beginFromCurrentState, .allowUserInteraction],
+                           animations: {
+                            
+                self.alpha = self.isHighlighted ? 0.5 : 1
+            }, completion: nil)
+        }
+    }
+    
 }
 
 private extension PrettyButton {
