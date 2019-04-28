@@ -34,6 +34,9 @@ public class SimulatorViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Simulador"
         
+        navigationItem.backBarButtonItem =
+            UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
+        
         simulatorViewScreen.simulateAction = {
             self.fetchSimulation(self.simulatorViewScreen.simulation)
         }

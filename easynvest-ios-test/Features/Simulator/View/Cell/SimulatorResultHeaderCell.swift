@@ -1,5 +1,5 @@
 //
-//  SimulatorResultHeaderView.swift
+//  SimulatorResultHeaderCell.swift
 //  easynvest-ios-test
 //
 //  Created by jonatha.pereira.lima on 26/04/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SimulatorResultHeaderView: UITableViewCell {
+public class SimulatorResultHeaderCell: UITableViewCell {
     
     var resultViewModel: SimulatorResultViewModel? {
         didSet {
@@ -20,7 +20,7 @@ public class SimulatorResultHeaderView: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: 14)
         label.textColor = .lightGray
         label.text = "Resultado da simulação"
         return label
@@ -29,6 +29,7 @@ public class SimulatorResultHeaderView: UITableViewCell {
     private lazy var totalValueLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.font = .systemFont(ofSize: 22)
         return label
     }()
     
@@ -42,7 +43,7 @@ public class SimulatorResultHeaderView: UITableViewCell {
     private lazy var totalIncomeLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: 14)
         label.textColor = .lightGray
         label.text = "Rendimento total de"
         return label
@@ -51,7 +52,7 @@ public class SimulatorResultHeaderView: UITableViewCell {
     private lazy var totalIncomeValueLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: 14)
         label.textColor = .green
         return label
     }()
@@ -68,7 +69,7 @@ public class SimulatorResultHeaderView: UITableViewCell {
     
 }
 
-extension SimulatorResultHeaderView: ViewCoding {
+extension SimulatorResultHeaderCell: ViewCoding {
     
     public func insertViews() {
         addSubview(titleLabel)
@@ -80,26 +81,26 @@ extension SimulatorResultHeaderView: ViewCoding {
     
     public func setupConstraints() {
         
-        titleLabel.snp.makeConstraints { make in
-            make.left.top.right.equalToSuperview()
+        totalValueLabel.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.centerY.equalToSuperview()
         }
         
-        totalValueLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(4)
+        titleLabel.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
+            make.bottom.equalTo(totalValueLabel.snp.top).offset(-4)
         }
         
         totalIncomeStack.snp.makeConstraints { make in
             make.top.equalTo(totalValueLabel.snp.bottom).offset(4)
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.left.right.equalToSuperview()
         }
         
     }
     
 }
 
-extension SimulatorResultHeaderView {
+extension SimulatorResultHeaderCell {
     
     struct Data {
         var totalValue: String

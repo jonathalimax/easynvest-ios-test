@@ -17,7 +17,7 @@ class SimulatorResultHeaderViewSpec: QuickSpec {
     override func spec() {
         var sut: SimulatorResultHeaderView!
         
-        describe("SimulatorResultHeaderView") {
+        describe("SimulatorResultHeaderCell") {
             beforeEach {
                 sut = SimulatorResultHeaderView()
                 sut.frame = CGRect(x: 0, y: 0, width: 320, height: 60)
@@ -30,7 +30,7 @@ class SimulatorResultHeaderViewSpec: QuickSpec {
                 
                 it("must render properly") {
                     
-                    expect(sut).to(haveValidSnapshot(named: "SimulatorResultHeaderView"))
+                    expect(sut).to(haveValidSnapshot(named: "SimulatorResultHeaderCell"))
                     
                 }
                 

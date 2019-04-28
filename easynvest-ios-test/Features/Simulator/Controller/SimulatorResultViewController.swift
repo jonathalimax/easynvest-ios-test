@@ -10,12 +10,13 @@ import UIKit
 
 public class SimulatorResultViewController: UIViewController {
     
+    private var simulationViewModel: SimulatorResultViewModel
     private var simulatorResultViewScreen: SimulatorResultViewScreen
-    private let sectionsAmount: Int
     
-    init() {
-        simulatorResultViewScreen = SimulatorResultViewScreen()
-        sectionsAmount = 4
+    init(simulationResponse: SimulationResponse) {
+        self.simulationViewModel =
+            SimulatorResultViewModel(simulation: simulationResponse)
+        self.simulatorResultViewScreen = SimulatorResultViewScreen()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,41 +32,60 @@ public class SimulatorResultViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Simulador"
+        
+        simulatorResultViewScreen.resultTableView.dataSource = self
+        simulatorResultViewScreen.resultTableView.delegate = self
+        
+        simulatorResultViewScreen.resultTableView
+            .register(SimulatorResultHeaderCell.self,
+                      forCellReuseIdentifier: "SimulatorResultHeaderCell")
+        
+        simulatorResultViewScreen.resultTableView
+            .register(SimulatorMainInfoCell.self,
+                      forCellReuseIdentifier: "SimulatorMainInfoCell")
+        
+        simulatorResultViewScreen.resultTableView
+            .register(SimulatorOthersInfoCell.self,
+                      forCellReuseIdentifier: "SimulatorOthersInfoCell")
     }
     
 }
 
 extension SimulatorResultViewController: UITableViewDataSource {
     
-    public func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionsAmount
-    }
-    
     public func tableView(_ tableView: UITableView,
                           numberOfRowsInSection section: Int) -> Int {
-        
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 0
-        case 2:
-            return 0
-        case 3:
-            return 0
-        default:
-            return 0
-        }
+        return 3
     }
     
     public func tableView(_ tableView: UITableView,
                           cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch indexPath.section {
+        switch indexPath.row {
         case 0:
             
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? SimulatorResultHeaderView {
-                //cell.resultViewModel = SimulatorResultViewModel(simulation: )
+            if let cell = tableView
+                .dequeueReusableCell(withIdentifier: "SimulatorResultHeaderCell") as? SimulatorResultHeaderCell {
+                
+                cell.resultViewModel = simulationViewModel
+                return cell
+            }
+            
+        case 1:
+            
+            if let cell = tableView
+                .dequeueReusableCell(withIdentifier: "SimulatorMainInfoCell") as? SimulatorMainInfoCell {
+                
+                cell.resultViewModel = simulationViewModel
+                return cell
+            }
+            
+        case 2:
+            
+            if let cell = tableView
+                .dequeueReusableCell(withIdentifier: "SimulatorOthersInfoCell") as? SimulatorOthersInfoCell {
+                
+                cell.resultViewModel = simulationViewModel
                 return cell
             }
             
@@ -73,7 +93,27 @@ extension SimulatorResultViewController: UITableViewDataSource {
             break
         }
         
-        fatalError("The section index not found")
+        fatalError("The section index was not found")
+    }
+
+}
+
+extension SimulatorResultViewController: UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView,
+                          heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        switch indexPath.row {
+        case 0:
+            return 120
+        case 1:
+            return 160
+        case 2:
+            return 190
+        default:
+            return 0
+        }
+        
     }
     
 }

@@ -25,8 +25,10 @@
 		1202E561226FEFF3006664BE /* KeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E560226FEFF3006664BE /* KeyboardListener.swift */; };
 		1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202E563226FF098006664BE /* Notification+keyboard.swift */; };
 		120755ED2274BF9F0087970C /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120755EC2274BF9F0087970C /* BaseURL.swift */; };
+		121249DA22752ACF0066807B /* SimulatorOthersInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121249D922752ACF0066807B /* SimulatorOthersInfoCell.swift */; };
 		121A8C802274E7840002BFF3 /* SimulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A8C7F2274E7840002BFF3 /* SimulationResponse.swift */; };
 		121A8C822274E81A0002BFF3 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A8C812274E81A0002BFF3 /* APIRoute.swift */; };
+		121A8C8622751E860002BFF3 /* SimulatorMainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A8C8522751E860002BFF3 /* SimulatorMainInfoCell.swift */; };
 		922A8EE62270EBE60074F248 /* KeyboardListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */; };
 		922A8EE82270EC0E0074F248 /* SimulatorViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */; };
 		928248F022736DE500134BCB /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F5859C22736BCA0014477B /* FBSnapshotTestCase.framework */; };
@@ -40,7 +42,7 @@
 		92F585772270F0780014477B /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585762270F0780014477B /* Simulation.swift */; };
 		92F585812270FF6B0014477B /* SimulatorResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585802270FF6B0014477B /* SimulatorResultViewModel.swift */; };
 		92F585832270FFD70014477B /* SimulatorItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585822270FFD70014477B /* SimulatorItemView.swift */; };
-		92F585862273651B0014477B /* SimulatorResultHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585852273651B0014477B /* SimulatorResultHeaderView.swift */; };
+		92F585862273651B0014477B /* SimulatorResultHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585852273651B0014477B /* SimulatorResultHeaderCell.swift */; };
 		92F5859A22736ADA0014477B /* SimulatorResultHeaderViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5859922736ADA0014477B /* SimulatorResultHeaderViewSpec.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +77,10 @@
 		1202E560226FEFF3006664BE /* KeyboardListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListener.swift; sourceTree = "<group>"; };
 		1202E563226FF098006664BE /* Notification+keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+keyboard.swift"; sourceTree = "<group>"; };
 		120755EC2274BF9F0087970C /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		121249D922752ACF0066807B /* SimulatorOthersInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorOthersInfoCell.swift; sourceTree = "<group>"; };
 		121A8C7F2274E7840002BFF3 /* SimulationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResponse.swift; sourceTree = "<group>"; };
 		121A8C812274E81A0002BFF3 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
+		121A8C8522751E860002BFF3 /* SimulatorMainInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorMainInfoCell.swift; sourceTree = "<group>"; };
 		922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListenerDelegate.swift; sourceTree = "<group>"; };
 		922A8EE72270EC0E0074F248 /* SimulatorViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewControllerDelegate.swift; sourceTree = "<group>"; };
 		928248F4227376FA00134BCB /* SimulatorItemViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorItemViewSpec.swift; sourceTree = "<group>"; };
@@ -86,7 +90,7 @@
 		92F585762270F0780014477B /* Simulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
 		92F585802270FF6B0014477B /* SimulatorResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultViewModel.swift; sourceTree = "<group>"; };
 		92F585822270FFD70014477B /* SimulatorItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorItemView.swift; sourceTree = "<group>"; };
-		92F585852273651B0014477B /* SimulatorResultHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultHeaderView.swift; sourceTree = "<group>"; };
+		92F585852273651B0014477B /* SimulatorResultHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultHeaderCell.swift; sourceTree = "<group>"; };
 		92F5858B22736A870014477B /* easynvest-ios-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "easynvest-ios-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F5858F22736A880014477B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92F5859922736ADA0014477B /* SimulatorResultHeaderViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultHeaderViewSpec.swift; sourceTree = "<group>"; };
@@ -310,7 +314,9 @@
 		92F58584227364F70014477B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				92F585852273651B0014477B /* SimulatorResultHeaderView.swift */,
+				121A8C8522751E860002BFF3 /* SimulatorMainInfoCell.swift */,
+				121249D922752ACF0066807B /* SimulatorOthersInfoCell.swift */,
+				92F585852273651B0014477B /* SimulatorResultHeaderCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -525,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121249DA22752ACF0066807B /* SimulatorOthersInfoCell.swift in Sources */,
 				1202E54C226FB709006664BE /* SimulatorResultViewScreen.swift in Sources */,
 				1202E561226FEFF3006664BE /* KeyboardListener.swift in Sources */,
 				1202E558226FBC5A006664BE /* SimulatorInputView.swift in Sources */,
@@ -541,7 +548,7 @@
 				1202E53F226FAFC9006664BE /* AppCoordinator.swift in Sources */,
 				1202E527226F99BE006664BE /* AppDelegate.swift in Sources */,
 				1202E54A226FB696006664BE /* SimulatorViewScreen.swift in Sources */,
-				92F585862273651B0014477B /* SimulatorResultHeaderView.swift in Sources */,
+				92F585862273651B0014477B /* SimulatorResultHeaderCell.swift in Sources */,
 				922A8EE82270EC0E0074F248 /* SimulatorViewControllerDelegate.swift in Sources */,
 				1202E541226FAFF2006664BE /* Coordinator.swift in Sources */,
 				1202E564226FF098006664BE /* Notification+keyboard.swift in Sources */,
@@ -550,6 +557,7 @@
 				1202E543226FB080006664BE /* SimulatorViewController.swift in Sources */,
 				120755ED2274BF9F0087970C /* BaseURL.swift in Sources */,
 				1202E55A226FC08F006664BE /* SimulatorCoordinator.swift in Sources */,
+				121A8C8622751E860002BFF3 /* SimulatorMainInfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,24 +8,24 @@
 
 import UIKit
 
-class SimulatorItemView: UITableViewCell {
+class SimulatorItemView: UIView {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: 14)
         label.textColor = .lightGray
         return label
     }()
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: 14)
         label.textAlignment = .right
         return label
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    init() {
+        super.init(frame: .zero)
         buildViewCode()
     }
     
@@ -45,14 +45,16 @@ extension SimulatorItemView: ViewCoding {
     
     func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(6)
-            make.top.bottom.equalToSuperview()
+            make.left.equalToSuperview().offset(12)
+            make.top.equalToSuperview().offset(5)
+            make.bottom.equalToSuperview().inset(5)
         }
         
         descriptionLabel.snp.makeConstraints { make in
-            make.left.equalTo(titleLabel.snp.right).offset(6)
-            make.top.bottom.equalToSuperview()
-            make.right.equalToSuperview().inset(6)
+            make.left.equalTo(titleLabel.snp.right)
+            make.top.equalToSuperview().offset(5)
+            make.right.equalToSuperview().inset(12)
+            make.bottom.equalToSuperview().inset(5)
         }
     }
     

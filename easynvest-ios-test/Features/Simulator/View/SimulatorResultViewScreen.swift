@@ -12,9 +12,8 @@ public class SimulatorResultViewScreen: UIView {
     
     public lazy var resultTableView: UITableView = {
         let tableView = UITableView()
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 50
-        tableView.tableFooterView = UIView()
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
         return tableView
     }()
     

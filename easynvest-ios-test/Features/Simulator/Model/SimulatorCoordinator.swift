@@ -24,8 +24,10 @@ public class SimulatorCoordinator: Coordinator {
         self.navigationController.viewControllers = [controller]
     }
     
-    private func startSimulatorResult() {
-        let simulatorResultViewController = SimulatorResultViewController()
+    private func startSimulatorResult(simulationResponse: SimulationResponse) {
+        let simulatorResultViewController =
+            SimulatorResultViewController(simulationResponse: simulationResponse)
+        
         navigationController.pushViewController(simulatorResultViewController,
                                                 animated: true)
     }
@@ -34,9 +36,9 @@ public class SimulatorCoordinator: Coordinator {
 
 extension SimulatorCoordinator: SimulatorViewControllerDelegate {
     func simulatorViewController(_ viewController: SimulatorViewController,
-                                        didSuccessfully simulation: SimulationResponse) {
+                                 didSuccessfully simulation: SimulationResponse) {
         
-        startSimulatorResult()
+        startSimulatorResult(simulationResponse: simulation)
     }
     
 }
