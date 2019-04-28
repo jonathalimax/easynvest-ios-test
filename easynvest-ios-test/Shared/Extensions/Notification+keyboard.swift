@@ -16,7 +16,7 @@ extension Notification {
             return .leastNormalMagnitude
         }
         
-        guard let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+        guard let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
             fatalError("The UIKeyboardFrameBeginUserInfoKey from keyboard cannot cast to NSValue")
         }
         
