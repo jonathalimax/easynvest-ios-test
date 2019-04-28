@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import SnapKit
 
 public class PrettyButton: UIButton {
+    
+    private let loaderView: UIActivityIndicatorView = {
+        let activityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.hidesWhenStopped = true
+        return activityIndicatorView
+    }()
     
     public var cornerRadius: CGFloat? {
         didSet {
@@ -20,6 +27,7 @@ public class PrettyButton: UIButton {
         super.init(frame: .zero)
         self.backgroundColor = backgroundColor
         setupButton()
+        buildViewCode()
     }
     
     @available(*, unavailable)
@@ -41,11 +49,41 @@ public class PrettyButton: UIButton {
     
 }
 
+public extension PrettyButton {
+    
+    func startLoading() {
+        loaderView.startAnimating()
+        self.titleLabel?.alpha = 0
+        self.isUserInteractionEnabled = false
+    }
+    
+    func stopLoading() {
+        loaderView.stopAnimating()
+        self.titleLabel?.alpha = 1
+        self.isUserInteractionEnabled = true
+    }
+    
+}
+
 private extension PrettyButton {
     
     func setupButton() {
         self.layer.masksToBounds = true
         self.clipsToBounds = true
+    }
+    
+}
+
+extension PrettyButton: ViewCoding {
+    
+    public func insertViews() {
+        addSubview(loaderView)
+    }
+    
+    public func setupConstraints() {
+        loaderView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
     
 }

@@ -122,7 +122,7 @@ extension SimulatorInputView: UITextFieldDelegate {
     public func textFieldDidEndEditing(_ textField: UITextField,
                                        reason: UITextField.DidEndEditingReason) {
         
-        if let text = textField.text, !text.isEmpty {
+        if let text = textField.text {
             delegate?.simulatorInputView(self,
                                          textField: textField,
                                          didCompleteTyping: text)

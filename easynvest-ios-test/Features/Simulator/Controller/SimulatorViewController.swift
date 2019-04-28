@@ -58,12 +58,20 @@ private extension SimulatorViewController {
     
     func fetchSimulation(_ simulation: Simulation) {
         
+        guard simulatorViewScreen.hasValidEntries() else {
+            return
+        }
+        
+        simulatorViewScreen.simulateButton.startLoading()
+        
         simulateService.get(simulation: simulation,
                             completion: { [weak self] result in
-            
+                                
             guard let sSelf = self, let result = result else {
                 return
             }
+                                
+            sSelf.simulatorViewScreen.simulateButton.stopLoading()
             sSelf.delegate?.simulatorViewController(sSelf,
                                                     didSuccessfully: result)
         })

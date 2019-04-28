@@ -45,7 +45,7 @@ public class SimulatorViewScreen: UIView {
         return simulatorInputView
     }()
     
-    private lazy var simulateButton: PrettyButton = {
+    public lazy var simulateButton: PrettyButton = {
         let button = PrettyButton(backgroundColor: .lightGray)
         button.setTitle("Simular", for: .normal)
         button.addTarget(self,
@@ -68,6 +68,7 @@ public class SimulatorViewScreen: UIView {
     
     @objc
     private func simulateButtonPressed() {
+        self.endEditing(true)
         simulateAction?()
     }
     
@@ -100,6 +101,18 @@ extension SimulatorViewScreen: ViewCoding {
     public func setupViews() {
         self.backgroundColor = .red
         simulateButton.cornerRadius = 25
+    }
+    
+    public func hasValidEntries() -> Bool {
+        
+        if simulation.investedAmount.isEmpty ||
+            simulation.rate == 0 ||
+            simulation.maturityDate.isEmpty {
+            
+            return false
+        }
+        
+        return true
     }
     
 }
