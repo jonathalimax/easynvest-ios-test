@@ -44,8 +44,7 @@ public struct SimulateService {
                 
                 completion(response)
                 
-            } catch let err {
-                print(err.localizedDescription)
+            } catch {
                 completion(nil)
             }
             

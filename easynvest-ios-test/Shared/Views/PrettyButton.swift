@@ -6,8 +6,8 @@
 //  Copyright © 2019 anonymous. All rights reserved.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 public class PrettyButton: UIButton {
     
