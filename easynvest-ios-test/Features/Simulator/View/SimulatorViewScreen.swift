@@ -72,6 +72,11 @@ public class SimulatorViewScreen: UIView {
         simulateAction?()
     }
     
+    public override func touchesBegan(_ touches: Set<UITouch>,
+                                      with event: UIEvent?) {
+        super.endEditing(true)
+    }
+    
 }
 
 extension SimulatorViewScreen: ViewCoding {
@@ -113,6 +118,19 @@ extension SimulatorViewScreen: ViewCoding {
         }
         
         return true
+    }
+    
+    func keyboard(shouldAppear: Bool, _ notification: Notification) {
+        
+        let keyboardFrame = shouldAppear ?
+            notification.keyboardHeight / 3 : 0
+        
+        self.stackView.snp.updateConstraints({ update in
+            update.centerY.equalToSuperview().offset(-keyboardFrame)
+        })
+        
+        self.layoutIfNeeded()
+        
     }
     
 }

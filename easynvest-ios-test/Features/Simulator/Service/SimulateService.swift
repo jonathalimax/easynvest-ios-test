@@ -44,7 +44,7 @@ public struct SimulateService {
                 
                 completion(response)
                 
-            } catch {
+            } catch let err {
                 completion(nil)
             }
             

@@ -83,11 +83,11 @@ private extension SimulatorViewController {
 extension SimulatorViewController: KeyboardListenerDelegate {
     
     public func keyboardWillAppear(_ notification: Notification) {
-        // TODO: Implement solution
+        simulatorViewScreen.keyboard(shouldAppear: true, notification)
     }
     
     public func keyboardWillDisappear(_ notification: Notification) {
-        // TODO: Implement solution
+        simulatorViewScreen.keyboard(shouldAppear: false, notification)
     }
     
 }
