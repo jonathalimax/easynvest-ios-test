@@ -45,6 +45,14 @@
 		92F585812270FF6B0014477B /* SimulatorResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585802270FF6B0014477B /* SimulatorResultViewModel.swift */; };
 		92F585832270FFD70014477B /* SimulatorItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585822270FFD70014477B /* SimulatorItemView.swift */; };
 		92F585862273651B0014477B /* SimulatorResultHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F585852273651B0014477B /* SimulatorResultHeaderCell.swift */; };
+		9C084D4C2276FE5D001D0E40 /* SimulatorMainInfoCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C084D4B2276FE5D001D0E40 /* SimulatorMainInfoCellSpec.swift */; };
+		9C084D4E2276FE69001D0E40 /* SimulatorOthersInfoCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C084D4D2276FE69001D0E40 /* SimulatorOthersInfoCellSpec.swift */; };
+		9C084D512276FF41001D0E40 /* SimulationResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C084D502276FF41001D0E40 /* SimulationResponse.json */; };
+		9C084D532277002B001D0E40 /* Simulation+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C084D522277002B001D0E40 /* Simulation+JSON.swift */; };
+		9C084D5622770598001D0E40 /* SimulationResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C084D502276FF41001D0E40 /* SimulationResponse.json */; };
+		9C084D572277089D001D0E40 /* JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C084D5422770095001D0E40 /* JSONFile.swift */; };
+		9C084D5B227708E4001D0E40 /* JSONFileSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C084D5A227708E4001D0E40 /* JSONFileSpec.swift */; };
+		9C084D5E22770BD0001D0E40 /* SimulatorResultViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C084D5D22770BD0001D0E40 /* SimulatorResultViewModelSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +108,13 @@
 		92F5859C22736BCA0014477B /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		92F5859D22736BCA0014477B /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
 		92F5859E22736BCA0014477B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		9C084D4B2276FE5D001D0E40 /* SimulatorMainInfoCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorMainInfoCellSpec.swift; sourceTree = "<group>"; };
+		9C084D4D2276FE69001D0E40 /* SimulatorOthersInfoCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorOthersInfoCellSpec.swift; sourceTree = "<group>"; };
+		9C084D502276FF41001D0E40 /* SimulationResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SimulationResponse.json; sourceTree = "<group>"; };
+		9C084D522277002B001D0E40 /* Simulation+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Simulation+JSON.swift"; sourceTree = "<group>"; };
+		9C084D5422770095001D0E40 /* JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFile.swift; sourceTree = "<group>"; };
+		9C084D5A227708E4001D0E40 /* JSONFileSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileSpec.swift; sourceTree = "<group>"; };
+		9C084D5D22770BD0001D0E40 /* SimulatorResultViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorResultViewModelSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,10 +279,11 @@
 		1202E553226FB7F8006664BE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1202E554226FB815006664BE /* ViewCoding.swift */,
+				9C084D5422770095001D0E40 /* JSONFile.swift */,
 				1202E560226FEFF3006664BE /* KeyboardListener.swift */,
 				922A8EE52270EBE60074F248 /* KeyboardListenerDelegate.swift */,
 				928248F82273B17600134BCB /* Result.swift */,
+				1202E554226FB815006664BE /* ViewCoding.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -326,8 +342,10 @@
 		92F5858C22736A880014477B /* easynvest-ios-testTests */ = {
 			isa = PBXGroup;
 			children = (
-				92F5859522736A990014477B /* Features */,
 				92F5858F22736A880014477B /* Info.plist */,
+				92F5859522736A990014477B /* Features */,
+				9C084D4F2276FF0F001D0E40 /* Resources */,
+				9C084D59227708CA001D0E40 /* Shared */,
 			);
 			path = "easynvest-ios-testTests";
 			sourceTree = "<group>";
@@ -344,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				92F5859722736AAA0014477B /* View */,
+				9C084D5C22770BBE001D0E40 /* ViewModel */,
 			);
 			path = Simulator;
 			sourceTree = "<group>";
@@ -362,8 +381,43 @@
 			isa = PBXGroup;
 			children = (
 				121249E1227576210066807B /* SimulatorResultHeaderCellSpec.swift */,
+				9C084D4B2276FE5D001D0E40 /* SimulatorMainInfoCellSpec.swift */,
+				9C084D4D2276FE69001D0E40 /* SimulatorOthersInfoCellSpec.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9C084D4F2276FF0F001D0E40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C084D58227708B6001D0E40 /* JSON */,
+				9C084D522277002B001D0E40 /* Simulation+JSON.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C084D58227708B6001D0E40 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				9C084D502276FF41001D0E40 /* SimulationResponse.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		9C084D59227708CA001D0E40 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9C084D5A227708E4001D0E40 /* JSONFileSpec.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9C084D5C22770BBE001D0E40 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C084D5D22770BD0001D0E40 /* SimulatorResultViewModelSpec.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +508,7 @@
 			files = (
 				1202E531226F99BF006664BE /* LaunchScreen.storyboard in Resources */,
 				1202E52E226F99BF006664BE /* Assets.xcassets in Resources */,
+				9C084D5622770598001D0E40 /* SimulationResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +516,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C084D512276FF41001D0E40 /* SimulationResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +593,7 @@
 				121249DA22752ACF0066807B /* SimulatorOthersInfoCell.swift in Sources */,
 				1202E54C226FB709006664BE /* SimulatorResultViewScreen.swift in Sources */,
 				1202E561226FEFF3006664BE /* KeyboardListener.swift in Sources */,
+				9C084D572277089D001D0E40 /* JSONFile.swift in Sources */,
 				1202E558226FBC5A006664BE /* SimulatorInputView.swift in Sources */,
 				92F585772270F0780014477B /* Simulation.swift in Sources */,
 				1202E55D226FDB4A006664BE /* PrettyButton.swift in Sources */,
@@ -568,8 +625,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C084D532277002B001D0E40 /* Simulation+JSON.swift in Sources */,
 				928248F5227376FA00134BCB /* SimulatorItemViewSpec.swift in Sources */,
 				121249E42275766E0066807B /* SimulatorInputViewSpec.swift in Sources */,
+				9C084D5B227708E4001D0E40 /* JSONFileSpec.swift in Sources */,
+				9C084D4E2276FE69001D0E40 /* SimulatorOthersInfoCellSpec.swift in Sources */,
+				9C084D5E22770BD0001D0E40 /* SimulatorResultViewModelSpec.swift in Sources */,
+				9C084D4C2276FE5D001D0E40 /* SimulatorMainInfoCellSpec.swift in Sources */,
 				121249E2227576210066807B /* SimulatorResultHeaderCellSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
