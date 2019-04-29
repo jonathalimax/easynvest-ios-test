@@ -29,7 +29,7 @@ public class SimulatorResultHeaderCell: UITableViewCell {
     private lazy var totalValueLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 22)
+        label.font = .preferredFont(forTextStyle: .largeTitle)
         return label
     }()
     
